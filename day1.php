@@ -1,17 +1,10 @@
 <?php
 declare(strict_types=1);
 
+include('common.php');
 $input = getInput();
 print "Part 1: " . countIncreases($input) . "\n";
 print "Part 2: " . countWindowIncreases($input) . "\n";
-
-function getInput(): array
-{
-    $lines = explode("\n", file_get_contents('input.txt'));
-    return array_filter($lines, function ($line) {
-        return is_numeric($line);
-    });
-}
 
 function countIncreases(array $points): int
 {
