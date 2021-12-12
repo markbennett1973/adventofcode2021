@@ -2,10 +2,7 @@
 declare(strict_types=1);
 
 include('common.php');
-$input = getInput();
-$map = array_map(function(string $row) {
-    return str_split($row);
-}, $input);
+$map = getInputMap();
 
 print "Part 1: " . getLowPoints($map) . "\n";
 print "Part 2: " . getBasins($map) . "\n";
